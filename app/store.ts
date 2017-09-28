@@ -63,7 +63,7 @@ export type AppAction
 
 
 export const pageSize = 5
-export const maxPage = (n: number) => Math.floor(n / pageSize) - 1
+export const maxPage = (n: number) => Math.floor(n / pageSize - 1) 
 
 const reduce = 
   (state: State = initial, action: AppAction): State =>

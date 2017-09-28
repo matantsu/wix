@@ -65597,7 +65597,7 @@
 	exports.loadingFailed = function (err) { return ({ type: 'LoadingFailed', error: err }); };
 	// Root reducer
 	exports.pageSize = 5;
-	exports.maxPage = function (n) { return Math.floor(n / exports.pageSize) - 1; };
+	exports.maxPage = function (n) { return Math.floor(n / exports.pageSize - 1); };
 	var reduce = function (state, action) {
 	    if (state === void 0) { state = initial; }
 	    return action.type == 'PreviousAction' && state.status == 'Normal' && state.page > 0 ? __assign({}, state, { page: state.page - 1 }) :
