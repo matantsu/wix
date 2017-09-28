@@ -75,13 +75,30 @@ export const Head = ({loading,search} : HeadProps) =>
       </Container>
   </Segment>
 
-export const Main = ({status,page,search,posts,next,prev}: any) =>
-  <div>
-    <Head 
-      loading={status == 'Loading'} 
-      search={search}/>
-
-    <Segment vertical loading={status == 'loading'}>
+export const Main = ({status,page,search,posts,next,prev}: any) => {
+  const loading = status == 'Loading';
+  return <div>
+    <Segment vertical>
+        <Container className="center aligned">
+          <h3>
+            <img src="https://www.file-extensions.org/imgs/app-icon/128/10395/wix-icon.png" alt=""/>
+          </h3>
+          <Input 
+            disabled={loading} 
+            placeholder="Type a subreddit ..."
+            onChange={e => input = e.currentTarget.value}
+            />
+          <Button labeled
+            onClick={() => search(input)}
+            loading={loading} 
+            disabled={loading} 
+            attached='right'
+            icon='search'
+            content='search'/>
+        </Container>
+    </Segment>
+      
+    <Segment vertical>
       <Container className="center aligned">
         {status == 'Error' &&
           <Segment inverted color='red' secondary>
@@ -104,3 +121,4 @@ export const Main = ({status,page,search,posts,next,prev}: any) =>
       </Container>
     </Segment>
   </div>
+}
