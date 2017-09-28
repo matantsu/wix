@@ -50,31 +50,7 @@ export const Gallery = ({prevAvailable,nextAvailable,posts,prev,next,page} : Gal
     </Image.Group>
   </div>
 
-type HeadProps = 
-  {
-    loading: boolean,
-    search: (term: string) => any
-  }
-
 let input = '';
-export const Head = ({loading,search} : HeadProps) => 
-  <Segment vertical>
-      <Container className="center aligned">
-        <Input 
-          disabled={loading} 
-          placeholder="Type a subreddit ..."
-          onChange={e => input = e.currentTarget.value}
-          />
-        <Button labeled
-          onClick={() => search(input)}
-          loading={loading} 
-          disabled={loading} 
-          attached='right'
-          icon='search'
-          content='search'/>
-      </Container>
-  </Segment>
-
 export const Main = ({status,page,search,posts,next,prev}: any) => {
   const loading = status == 'Loading';
   return <div>

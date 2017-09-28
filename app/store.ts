@@ -21,7 +21,11 @@ type Empty =
 type Normal =
   {status: 'Normal', posts: Post[], page: number}
 
-export type State = Loading | Error | Empty | Normal
+export type State 
+  = Loading 
+  | Error 
+  | Empty 
+  | Normal
 
 const initial: State = 
   {
