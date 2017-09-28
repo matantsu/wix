@@ -1,6 +1,23 @@
-# React-TypeScript
+## Wix Task Solution
 
-Minimal boilerplate for a single-page app using React, TypeScript with JSX support (TSX), and Visual Studio Code.
+# Features:
+- React
+- TypeScript
+- Webpack
+- Redux
+- [Semantic-ui](http://semantic-ui.com) for the good looks
+- Mobile friendly
+- Written in a very functional style
+- Pagination
+- [redux-thunk](https://github.com/gaearon/redux-thunk) for side-effects (reddit api request)
+- reddit.js
+
+# Files Overview:
+- `app.tsx` - Defines the entry point to the app and connects the redux store to the `Main` component.
+- `effects.ts` - Defines the side-effecting(non-pure) operations we do in the app. 
+  Each operation returns a thunk that is passed to `dispatch` to be handled by the `redux-thunk` middleware.
+- `store.ts` - Defines the business logic of the app through the types, actions, and reducer. Exposes the store to be consumed by the     rest of the app.
+- `views.tsx` - Defines the different components as functions on the current state.
 
 ## Usage
 
@@ -14,8 +31,8 @@ To build the project from the command-line:
 
 To view the app in the browser:
 
-* `npm install -g http-server`
-* `http-server`
+* `npm install -g local-http-server`
+* `ws -d public`
 * Open [http://localhost:8080/](http://localhost:8080/) in your browser of choice.
 
 To develop using Visual Studio Code:
@@ -26,4 +43,4 @@ To develop using Visual Studio Code:
 
 To instantly view changes in the browser while developing:
 
-* Run `npm run dev` in a terminal. This will start both `webpack` in watch mode and `http-server`. Hint: Visual Studio Code contains a built-in terminal.
+* Run `npm run dev` in a terminal. This will start both `webpack` in watch mode and `local-http-server`. Hint: Visual Studio Code contains a built-in terminal.
