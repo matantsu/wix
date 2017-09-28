@@ -1,6 +1,6 @@
-## Wix Task Solution
+# Wix Task Solution
 
-# Features:
+## Features:
 - React
 - TypeScript
 - Webpack
@@ -12,7 +12,7 @@
 - [redux-thunk](https://github.com/gaearon/redux-thunk) for side-effects (reddit api request)
 - reddit.js
 
-# Files Overview:
+## Files Overview:
 - `app.tsx` - Defines the entry point to the app and connects the redux store to the `Main` component.
 - `effects.ts` - Defines the side-effecting(non-pure) operations we do in the app. 
   Each operation returns a thunk that is passed to `dispatch` to be handled by the `redux-thunk` middleware.
