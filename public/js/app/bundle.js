@@ -24304,13 +24304,6 @@
 	        })));
 	};
 	var input = '';
-	exports.Head = function (_a) {
-	    var loading = _a.loading, search = _a.search;
-	    return React.createElement(semantic_ui_react_1.Segment, { vertical: true },
-	        React.createElement(semantic_ui_react_1.Container, { className: "center aligned" },
-	            React.createElement(semantic_ui_react_1.Input, { disabled: loading, placeholder: "Type a subreddit ...", onChange: function (e) { return input = e.currentTarget.value; } }),
-	            React.createElement(semantic_ui_react_1.Button, { labeled: true, onClick: function () { return search(input); }, loading: loading, disabled: loading, attached: 'right', icon: 'search', content: 'search' })));
-	};
 	exports.Main = function (_a) {
 	    var status = _a.status, page = _a.page, search = _a.search, posts = _a.posts, next = _a.next, prev = _a.prev;
 	    var loading = status == 'Loading';
@@ -24319,7 +24312,7 @@
 	            React.createElement(semantic_ui_react_1.Container, { className: "center aligned" },
 	                React.createElement("h3", null,
 	                    React.createElement("img", { src: "https://www.file-extensions.org/imgs/app-icon/128/10395/wix-icon.png", alt: "" })),
-	                React.createElement(semantic_ui_react_1.Input, { disabled: loading, placeholder: "Type a subreddit ...", onChange: function (e) { return input = e.currentTarget.value; } }),
+	                React.createElement(semantic_ui_react_1.Input, { label: 'www.reddit.com/r/', disabled: loading, placeholder: "Type a subreddit ...", onChange: function (e) { return input = e.currentTarget.value; } }),
 	                React.createElement(semantic_ui_react_1.Button, { labeled: true, onClick: function () { return search(input); }, loading: loading, disabled: loading, attached: 'right', icon: 'search', content: 'search' }))),
 	        React.createElement(semantic_ui_react_1.Segment, { vertical: true },
 	            React.createElement(semantic_ui_react_1.Container, { className: "center aligned" },

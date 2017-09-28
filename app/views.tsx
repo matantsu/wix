@@ -60,6 +60,7 @@ export const Main = ({status,page,search,posts,next,prev}: any) => {
             <img src="https://www.file-extensions.org/imgs/app-icon/128/10395/wix-icon.png" alt=""/>
           </h3>
           <Input 
+            label='www.reddit.com/r/'
             disabled={loading} 
             placeholder="Type a subreddit ..."
             onChange={e => input = e.currentTarget.value}
