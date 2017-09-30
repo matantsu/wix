@@ -1,5 +1,7 @@
 import { createStore,applyMiddleware  } from 'redux'
 import thunk from 'redux-thunk';
+import {  } from 'redux';
+import { compose } from 'redux';
 
 
 // Model
@@ -98,7 +100,15 @@ const reduce =
       } :
       state
 
+// integration with Redux DevTools
+declare module window{
+  export const __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
+}
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 export const store = createStore(
   reduce,
-  applyMiddleware(thunk)
+  composeEnhancers(
+    applyMiddleware(thunk)
+  )
 );

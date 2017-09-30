@@ -51,7 +51,7 @@ export const Gallery = ({prevAvailable,nextAvailable,posts,prev,next,page} : Gal
   </div>
 
 let input = '';
-export const Main = ({status,page,search,posts,next,prev}: any) => {
+export const Main = ({status,page,search,posts,next,prev,error}: any) => {
   const loading = status == 'Loading';
   return <div>
     <Segment vertical>
@@ -79,7 +79,7 @@ export const Main = ({status,page,search,posts,next,prev}: any) => {
       <Container className="center aligned">
         {status == 'Error' &&
           <Segment inverted color='red' secondary>
-            An error has occured
+            An error has occured.
           </Segment>
         }
         {status == 'Empty' &&
