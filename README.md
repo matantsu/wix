@@ -6,7 +6,7 @@
 - Webpack
 - Redux
 - Integration with [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension) allowing time-traveling debugging and more!
-- [React Semantic-ui](https://react.semantic-ui.com/) for the good looks
+- [Semantic-ui React](https://react.semantic-ui.com/) for the good looks
 - Mobile friendly
 - Written in a very functional style
 - Pagination
